@@ -1,35 +1,35 @@
 #include <iostream>
 using namespace std;
 
-int fac(int n)
+int prime(int n)
 {
-    if (n == 0 || n == 1)
+    int x = 0;
+    for (int i = 2; i <= n; i++)
     {
-        return 1;
-    }
-    else
-    {
-        return n * fac(n - 1);
+        for (int j = 2; j < i; j++)
+        {
+            if (i % j == 0)
+            {
+                x = 1;
+                break;
+            }
+        }
+        if (x != 1)
+        {
+            cout << i << " ";
+        }
+        x = 0;
     }
 }
 
 int main()
 {
     int n = 0;
-    int r = 0;
 
-    cout << "Enter value of r & n for nCr" << endl;
-    cout << "Enter n: ";
+    cout << "Print prime numbers from 2 to ";
     cin >> n;
-    cout << "Enter r: ";
-    cin >> r;
 
-    if (n >= r)
-    {
-        cout << "Value of nCr: " << fac(n) / (fac(r) * fac(n - r)) << endl;
-    }
-    else
-    {
-        cout << "nCr not possible";
-    }
+    prime(n);
+
+    return 0;
 }

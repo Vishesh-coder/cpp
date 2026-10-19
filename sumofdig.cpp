@@ -20,4 +20,6 @@ int main()
     cin >> n;
 
     cout << "Sum of Digits: " << sumofdig(n) << endl;
+
+    return 0;
 }

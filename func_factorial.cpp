@@ -18,4 +18,6 @@ int main()
     cin >> n;
 
     cout << "Factorial of the number: " << fac(n) << endl;
+
+    return 0;
 }

@@ -32,4 +32,6 @@ int main()
     {
         cout << "nCr not possible";
     }
+
+    return 0;
 }
