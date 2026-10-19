@@ -8,7 +8,7 @@ int binary(int n)
     while (n != 0)
     {
         binum += (n % 2) * pow10;
-        n = n / 2;
+        n /= 2;
         pow10 *= 10;
         i++;
     }

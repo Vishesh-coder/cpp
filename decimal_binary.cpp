@@ -8,7 +8,7 @@ int d2b(int n)
     while (n != 0)
     {
         binum += (n % 2) * pow10;
-        n = n / 2;
+        n /= 2;
         pow10 *= 10;
         i++;
     }
@@ -22,7 +22,7 @@ int b2d(int n)
     while (n != 0)
     {
         decnum += (n % 10) * pow2;
-        n = n / 10;
+        n /= 10;
         pow2 *= 2;
         i++;
     }
