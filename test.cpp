@@ -1,36 +1,26 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-int fibonacci(int n)
+int binary(int n)
 {
-    if (n == 0)
+    int binum = 0, i = 0, pow10 = 1;
+    while (n != 0)
     {
-        return 0;
+        binum += (n % 2) * pow10;
+        n = n / 2;
+        pow10 *= 10;
+        i++;
     }
-    else if (n == 1)
-    {
-        return 1;
-    }
-    else
-    {
-        return fibonacci(n - 1) + fibonacci(n - 2);
-    }
+
+    return binum;
 }
 
 int main()
 {
     int n = 0;
-    cout << "Enter a Positive Number: ";
+    cout << "Enter a number: ";
     cin >> n;
 
-    if (n < 0)
-    {
-        cout << "Not possible";
-    }
-    else
-    {
-        cout << "The nth Fibonacci Number is " << fibonacci(n) << endl;
-    }
-
-    return 0;
+    cout << "Binary Number of " << n << ": " << binary(n) << endl;
 }
