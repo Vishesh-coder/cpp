@@ -1,35 +1,36 @@
 #include <iostream>
 using namespace std;
 
-int prime(int n)
+int fibonacci(int n)
 {
-    int x = 0;
-    for (int i = 2; i <= n; i++)
+    if (n == 0)
     {
-        for (int j = 2; j < i; j++)
-        {
-            if (i % j == 0)
-            {
-                x = 1;
-                break;
-            }
-        }
-        if (x != 1)
-        {
-            cout << i << " ";
-        }
-        x = 0;
+        return 0;
+    }
+    else if (n == 1)
+    {
+        return 1;
+    }
+    else
+    {
+        return fibonacci(n - 1) + fibonacci(n - 2);
     }
 }
 
 int main()
 {
     int n = 0;
-
-    cout << "Print prime numbers from 2 to ";
+    cout << "Enter a Positive Number: ";
     cin >> n;
 
-    prime(n);
+    if (n < 0)
+    {
+        cout << "Not possible";
+    }
+    else
+    {
+        cout << "The nth Fibonacci Number is " << fibonacci(n) << endl;
+    }
 
     return 0;
 }
